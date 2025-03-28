@@ -25,3 +25,5 @@ def password(request):
     return render(request, 'generator/password.html',{'password':thepassword})
 def me(request):
     return render(request, 'generator/me.html')
+def main(request):
+    return render(request, 'generator/main.html')
