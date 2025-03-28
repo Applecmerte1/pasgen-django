@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def count(request):
+    return render(request, 'countsym/countsumbol.html')
+    a = list()
+    if request.GET.get('comment') != 0:
+        pass

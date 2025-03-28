@@ -6,6 +6,7 @@ from countsym import views as views_sym
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views_gen.main),
+    path('countword/',views_sym.count),
     path('genpassword/', views_gen.home),
     path('genpassword/generatedpassword/', views_gen.password, name ='home11'),
     path('me/', views_gen.me,name = 'its me'),
