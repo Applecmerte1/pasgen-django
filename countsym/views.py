@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def count(request):
-    sumb = list()
-    a = 0
+def count(request): 
     text1 = request.GET.get('type')
-    a = text1.replace(('!"№;%:?*()@#$^&'), '')
-    print(a)
+    sumb = list()
+    if text1!=None:
+        for i in text1:
+            if i.isalpha()==True:
+                sumb.append(i)
+    print(len(sumb))
     return render(request, 'countsym/countsumbol.html')
