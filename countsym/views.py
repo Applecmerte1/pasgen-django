@@ -8,5 +8,4 @@ def count(request):
         for i in text1:
             if i.isalpha()==True:
                 sumb.append(i)
-    print(len(sumb))
-    return render(request, 'countsym/countsumbol.html')
+    return render(request, 'countsym/countsumbol.html',{'len':len(sumb)})
